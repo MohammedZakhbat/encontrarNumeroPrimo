@@ -1,52 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./output.css">
     <title>Sistema de Números Primos</title>
 </head>
-<body>
-    <div>
-        <div>
-            <div>
-                <h1>
-                    Sistema de Detección<br>de Primos
-                </h1>
-                <p>
-                    Análisis algorítmico en tiempo real de un array numérico
-                </p>
-                <div>
-                    <div>
-                        <span>Motor</span> JavaScript optimizado
-                    </div>
-                    <div>
-                        <span>Método</span>
-                    </div>
-                    <div>
-                        <span>Estado</span>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <h2>Entrada de datos</h2>
-                    <span>separados por coma</span>
-                </div>
-                <input type="text" id="arrayIput">
-                <button oncanplay="run()">EJECUTAR ANÁLISIS</button>
-                <div>
-                    <div>
-                        <p>Primo detectado</p>
-                        <p id="result">---</p>
-                    </div>
-                    <div>
-                        <p>Estado del sistema</p>
-                        <p id="status">Inactivo</p>
-                    </div>
-                </div>
-            </div>
+
+<body class="min-h-screen bg-[#0b0f1a] flex items-center justify-center p-4">
+
+  <div class="w-full max-w-4xl grid md:grid-cols-5 gap-6">
+
+    <div class="md:col-span-2 bg-gradient-to-br from-indigo-600/30 to-cyan-500/10 border border-white/10 rounded-3xl p-6 backdrop-blur-xl">
+
+      <div class="text-5xl">🧠</div>
+
+      <h1 class="text-white text-3xl font-bold mt-4 leading-tight">
+        Sistema de Detección<br>de Primos
+      </h1>
+
+      <p class="text-slate-300 mt-3 text-sm">
+        Análisis algorítmico en tiempo real de un array numérico
+      </p>
+
+      <div class="mt-6 space-y-3 text-xs text-slate-400">
+        <div class="flex justify-between">
+          <span>Motor</span><span class="text-cyan-300">JavaScript optimizado</span>
         </div>
+        <div class="flex justify-between">
+          <span>Método</span><span class="text-cyan-300">recorrido do-while</span>
+        </div>
+        <div class="flex justify-between">
+          <span>Estado</span><span class="text-green-400">Activo</span>
+        </div>
+      </div>
     </div>
+
+    <div class="md:col-span-3 bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-xl space-y-6">
+
+      <div class="flex items-center justify-between">
+        <h2 class="text-white font-semibold text-lg">Entrada de datos</h2>
+        <span class="text-xs text-slate-400">separados por coma</span>
+      </div>
+
+      <input
+        id="arrayInput"
+        type="text"
+        placeholder="4, 6, 8, 11, 15, 17"
+        class="w-full p-4 rounded-2xl bg-black/30 border border-white/10 text-white placeholder-slate-500 focus:ring-2 focus:ring-cyan-500 outline-none"
+      />
+
+      <button
+        onclick="run()"
+        class="w-full py-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-indigo-600 text-white font-semibold tracking-wide hover:scale-[1.02] active:scale-95 transition"
+      >
+        EJECUTAR ANÁLISIS
+      </button>
+
+      <div class="grid grid-cols-2 gap-4">
+
+        <div class="bg-black/30 border border-white/10 rounded-2xl p-4">
+          <p class="text-xs text-slate-400">Primo detectado</p>
+          <p id="result" class="text-xl text-white font-bold mt-1">---</p>
+        </div>
+
+        <div class="bg-black/30 border border-white/10 rounded-2xl p-4">
+          <p class="text-xs text-slate-400">Estado del sistema</p>
+          <p id="status" class="text-green-400 font-semibold mt-1">Inactivo</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
     <script src="app.js"></script>
 </body>
+
 </html>
